@@ -1,0 +1,21 @@
+ansible_host: ci.zhdk.ch
+
+ansible_host: '{{address}}'
+ansible_user: root
+
+server_url_host: ci.zhdk.ch
+server_base_url: http://{{server_url_host}}
+
+job_retention_duration: 10 Years
+task_retention_duration: 10 Years
+trial_retention_duration: 21 Days
+
+address: 195.176.247.161
+#network 195.176.247.129
+#broadcast 195.176.247.129
+netmask: 255.255.255.192
+gateway: 195.176.247.129
+dns-nameservers: 10.158.0.53
+dns-search: zhdk.ch
+
+

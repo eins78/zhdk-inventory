@@ -1,0 +1,8 @@
+ansible_host: ci3.zhdk.ch
+ansible_user: root
+
+
+job_retention_duration: 1 Year
+task_retention_duration: 1 Day
+trial_retention_duration: 3 Hours
+

@@ -1,0 +1,17 @@
+ci_executor_trait_ansible: true
+ci_executor_trait_apache2: true
+ci_executor_trait_bower: true
+ci_executor_trait_chruby: true
+ci_executor_trait_firefox_esr: true
+ci_executor_trait_leiningen: true
+ci_executor_trait_misc: true
+ci_executor_trait_mysql: true
+ci_executor_trait_nodejs: true
+ci_executor_trait_openjdk: true
+ci_executor_trait_phantomjs: true
+ci_executor_trait_postgresql: true
+ci_executor_trait_rbenv: false
+ci_executor_trait_ruby_install: true
+ci_executor_trait_sqlite: true
+
+

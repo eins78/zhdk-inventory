@@ -1,0 +1,112 @@
+managed_repositories:
+
+  'https://github.com/cider-ci/cider-ci_demo-project-bash':
+    update_attributes:
+      name: 'Cider-CI Bash Demo Project'
+
+  #############################################################################
+  ### Cider-CI ################################################################
+  #############################################################################
+
+  'https://github.com/cider-ci/cider-ci':
+    update_attributes: &CIDER-CI
+      name: Cider-CI
+      update_notification_token: {{cider_ci.cider_ci.update_notification_token}}
+      foreign_api_endpoint: https://api.github.com
+      foreign_api_authtoken: {{github_authtoken}}
+      foreign_api_owner: cider-ci
+      foreign_api_repo: cider-ci
+      public_view_permission: true
+
+  'https://github.com/cider-ci/cider-ci_clj-utils':
+    update_attributes:
+      <<: *CIDER-CI
+      name: Cider-CI clj-utils
+      update_notification_token: {{cider_ci.clj_utils.update_notification_token}}
+      foreign_api_repo: cider-ci_clj-utils
+
+  'https://github.com/cider-ci/cider-ci_deploy':
+    update_attributes:
+      <<: *CIDER-CI
+      name: Cider-CI Deploy
+      update_notification_token: {{cider_ci.deploy.update_notification_token}}
+      foreign_api_repo: cider-ci_deploy
+
+  'https://github.com/cider-ci/cider-ci_documentation-source':
+    update_attributes:
+      <<: *CIDER-CI
+      name: Cider-CI Documentation Source
+      update_notification_token: {{cider_ci.documentation_source.update_notification_token}}
+      foreign_api_repo: cider-ci_documentation-source
+
+  'https://github.com/cider-ci/cider-ci_integration-tests':
+    update_attributes:
+      <<: *CIDER-CI
+      name: Cider-CI Integration-Tests
+      update_notification_token: {{cider_ci.integration_tests.update_notification_token}}
+      foreign_api_repo: cider-ci_integration-tests
+
+
+  #############################################################################
+  ### Leihs ###################################################################
+  #############################################################################
+
+  'https://github.com/leihs/leihs':
+    update_attributes:
+      name: leihs
+      update_notification_token: {{leihs.leihs.update_notification_token}}
+      foreign_api_endpoint: https://api.github.com
+      foreign_api_authtoken: {{github_authtoken}}
+      foreign_api_owner: leihs
+      foreign_api_repo: leihs
+
+
+  #############################################################################
+  ### Madek ###################################################################
+  #############################################################################
+
+  'https://github.com/Madek/madek':
+    update_attributes: &MADEK
+      foreign_api_endpoint: https://api.github.com
+      foreign_api_authtoken: {{github_authtoken}}
+      foreign_api_owner: Madek
+      name: Madek
+      update_notification_token: {{madek.madek.update_notification_token}}
+      foreign_api_repo: madek
+      branch_trigger_include_match: '^.+$'
+      public_view_permission: true
+
+  'https://github.com/Madek/madek-api':
+    update_attributes:
+      <<: *MADEK
+      name: Madek API
+      update_notification_token: {{madek.api.update_notification_token}}
+      foreign_api_repo: madek-api
+
+  'https://github.com/Madek/madek_admin-webapp':
+    update_attributes:
+      <<: *MADEK
+      name: Madek Admin-Webapp
+      update_notification_token: {{madek.admin_webapp.update_notification_token}}
+      foreign_api_repo: madek_admin-webapp
+
+  'https://github.com/Madek/madek-datalayer':
+    update_attributes:
+      <<: *MADEK
+      name: Madek Datalayer
+      update_notification_token: {{madek.datalayer.update_notification_token}}
+      foreign_api_repo: madek-datalayer
+
+  'https://github.com/Madek/madek_integration-tests':
+    update_attributes:
+      <<: *MADEK
+      name: Madek Integration-Tests
+      update_notification_token: {{madek.integration_tests.update_notification_token}}
+      foreign_api_repo: madek_integration-tests
+
+  'https://github.com/Madek/madek-webapp':
+    update_attributes:
+      <<: *MADEK
+      name: Madek Webapp
+      update_notification_token: {{madek.webapp.update_notification_token}}
+      foreign_api_repo: madek-webapp

@@ -1,0 +1,12 @@
+ansible_host: cislave.madek.zhdk.ch
+ansible_user: root
+
+accepted_repositories:
+- https://github.com/Madek/madek
+- https://github.com/cider-ci/cider-ci
+
+ci_executor_trait_ansible: true
+ci_executor_trait_leiningen: true
+
+# this is a vm
+ci_ntp_setup: false

@@ -1,0 +1,6 @@
+executor_trial_retention_duration: 1 Second
+
+executor_max_load: 2
+
+ansible_host: ci-executor-07.zhdk.ch
+ansible_user: root

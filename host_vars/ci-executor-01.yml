@@ -1,0 +1,14 @@
+executor_trial_retention_duration: 1 Minute
+
+executor_max_load: 16
+
+#ansible_host: '{{address}}'
+ansible_host: 10.157.2.51
+ansible_user: root
+
+address: 10.157.2.51
+network: 10.157.2.0
+netmask: 255.255.255.0
+gateway: 10.157.2.1
+dns-nameservers: 10.158.0.53
+dns-search: zhdk.ch
