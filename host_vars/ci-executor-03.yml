@@ -1,6 +1,4 @@
-executor_trial_retention_duration: 1 Minute
-
-executor_max_load: 16
+ci_executor_max_load: 10
 
 ansible_host: '{{address}}'
 ansible_user: root
