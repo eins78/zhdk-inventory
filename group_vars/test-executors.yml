@@ -1,4 +1,5 @@
 ci_executor_trial_retention_duration: 1 Minute
+ci_executor_daily_reboot: yes
 
 ci_executor_trait_ansible: true
 ci_executor_trait_apache2: true

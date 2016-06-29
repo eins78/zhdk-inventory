@@ -2,8 +2,9 @@
 ci2
 ci-executor-01
 ci-executor-02
-ci-executor-05
+ci-executor-03
 ci-executor-04
+ci-executor-05
 ci-executor-madek
 
 [cider-ci_server]
@@ -12,6 +13,7 @@ ci2
 [cider-ci_executors]
 ci-executor-01
 ci-executor-02
+ci-executor-03
 ci-executor-05
 ci-executor-04
 ci-executor-madek
@@ -19,8 +21,9 @@ ci-executor-madek
 [cider-ci_executors]
 ci-executor-01
 ci-executor-02
-ci-executor-05
+ci-executor-03
 ci-executor-04
+ci-executor-05
 ci-executor-madek
 
 [secrets:children]
@@ -32,6 +35,7 @@ cider-ci_hosts
 [test-executors]
 ci-executor-01
 ci-executor-02
+ci-executor-03
 ci-executor-05
 ci-executor-04
 
@@ -39,6 +43,7 @@ ci-executor-04
 ci2
 ci-executor-01
 ci-executor-02
+ci-executor-03
 ci-executor-05
 ci-executor-04
 

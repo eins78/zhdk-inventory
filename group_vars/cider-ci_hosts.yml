@@ -2,6 +2,7 @@ ci_vim_mode: true
 
 ci_server_external_hostname: ci.zhdk.ch
 
+ci_ntp_setup: yes
 ci_ntp_server: ntp.zhdk.ch
 
 ci_server_authentication_providers:
