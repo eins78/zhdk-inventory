@@ -83,6 +83,13 @@ managed_repositories:
       update_notification_token: {{madek.api.update_notification_token}}
       foreign_api_repo: madek-api
 
+  'https://github.com/Madek/madek-deploy':
+    update_attributes:
+      <<: *MADEK
+      name: Madek Deploy
+      update_notification_token: {{madek.deploy.update_notification_token}}
+      foreign_api_repo: madek-api
+
   'https://github.com/Madek/madek_admin-webapp':
     update_attributes:
       <<: *MADEK
