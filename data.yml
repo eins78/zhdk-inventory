@@ -18,6 +18,13 @@ managed_repositories:
       foreign_api_repo: cider-ci
       public_view_permission: true
 
+  'https://github.com/cider-ci/cider-ci_builder':
+    update_attributes:
+      <<: *CIDER-CI
+      name: Cider-CI Builder
+      update_notification_token: {{cider_ci.builder.update_notification_token}}
+      foreign_api_repo: cider-ci_builder
+
   'https://github.com/cider-ci/cider-ci_clj-utils':
     update_attributes:
       <<: *CIDER-CI
