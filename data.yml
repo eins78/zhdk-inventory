@@ -1,3 +1,10 @@
+managed_users:
+  'madek-ci-api-user':
+    update_attributes:
+      is_admin: false
+      password: '{{users['madek-ci-api-user'].password}}'
+
+
 managed_repositories:
 
   'https://github.com/cider-ci/cider-ci_demo-project-bash':
