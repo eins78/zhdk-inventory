@@ -1,5 +1,7 @@
 ci_executor_max_load: 10
 
+ci_executor_trait_lxd: yes
+
 ansible_host: '{{address}}'
 ansible_user: root
 

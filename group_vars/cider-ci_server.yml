@@ -1,0 +1,52 @@
+ci_server_authentication_providers:
+  github:
+    name: GitHub
+    client_id: "{{github_client_id}}"
+    client_secret: "{{github_client_secret}}"
+    oauth_base_url: https://github.com/login/oauth
+    api_endpoint: https://api.github.com
+    sign_in_strategies:
+
+    - type: team-membership
+      organization_login: zhdk
+      team_name: 'ci.zhdk.ch Admins'
+      access_token: "{{github_zhdk_team_membership_access_token}}"
+      create_attributes:
+        is_admin: true
+        account_enabled: true
+        password_sign_in_allowed: true
+        max_session_lifetime: 7 days
+      update_attributes:
+        is_admin: true
+        account_enabled: true
+
+    - type: organization-membership
+      organization_login: Madek
+      create_attributes:
+        is_admin: false
+        account_enabled: true
+        password_sign_in_allowed: false
+        max_session_lifetime: 7 days
+      update_attributes:
+        account_enabled: true
+
+    - type: organization-membership
+      organization_login: leihs
+      create_attributes:
+        is_admin: false
+        account_enabled: true
+        password_sign_in_allowed: false
+        max_session_lifetime: 7 days
+      update_attributes:
+        account_enabled: true
+
+    - type: organization-membership
+      organization_login: cider-ci
+      create_attributes:
+        is_admin: false
+        account_enabled: true
+        password_sign_in_allowed: false
+        max_session_lifetime: 7 days
+      update_attributes:
+        account_enabled: true
+
