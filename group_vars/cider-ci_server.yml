@@ -1,3 +1,5 @@
+ci_server_trial_dispatch_timeout: 3 Hours
+
 ci_server_authentication_providers:
   github:
     name: GitHub

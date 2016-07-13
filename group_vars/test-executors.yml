@@ -1,3 +1,6 @@
+ci_executor_working_dir: /ramdisk/ci-working-dir
+ci_executor_trait_postgresql_data_dir: /ramdisk/cider-ci_executor_trait_postgresql-{{ci_executor_trait_postgresql_version}}_data
+
 ci_executor_trial_retention_duration: 1 Minute
 ci_executor_daily_reboot: yes
 
@@ -6,9 +9,11 @@ ci_executor_trait_apache2: true
 ci_executor_trait_bower: true
 ci_executor_trait_chruby: true
 ci_executor_trait_firefox_esr: true
+ci_executor_trait_git_crypt: true
 ci_executor_trait_leiningen: true
 ci_executor_trait_misc: true
 ci_executor_trait_mysql: true
+ci_executor_trait_mysql_variant: mariadb
 ci_executor_trait_nodejs: true
 ci_executor_trait_openjdk: true
 ci_executor_trait_phantomjs: true

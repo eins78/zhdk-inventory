@@ -10,6 +10,10 @@ accepted_repositories:
 
 ci_executor_trait_ansible: true
 ci_executor_trait_leiningen: true
+ci_executor_trait_git_crypt: true
 
 # this is a vm
 ci_ntp_setup: false
+
+ci_executor_max_load: 3
+
