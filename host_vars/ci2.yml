@@ -2,8 +2,12 @@ ansible_host: ci.zhdk.ch
 
 ansible_user: root
 
-server_url_host: ci.zhdk.ch
-server_base_url: http://{{server_url_host}}
+ci_server_virtual_hosts:
+- hostname: '{{ci_server_external_hostname}}'
+  ip: '*'
+  force_redirect_to_https: yes
+  ssl_certificate_file: /etc/letsencrypt/live/ci.zhdk.ch/fullchain.pem
+  ssl_certificate_key_file: /etc/letsencrypt/live/ci.zhdk.ch/privkey.pem
 
 job_retention_duration: 10 Years
 task_retention_duration: 10 Years

@@ -21,7 +21,6 @@ ci-executor-madek
 ci2
 
 [cider-ci_executors]
-ci2
 ci-executor-01
 ci-executor-02
 ci-executor-03

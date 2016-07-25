@@ -1,4 +1,4 @@
-ci_executor_max_load: 10
+ci_executor_max_load: 12
 
 ci_executor_trait_lxd: yes
 

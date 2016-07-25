@@ -1,2 +1,14 @@
+ci_server_virtual_hosts:
+- hostname: "{{ ci_server_internal_hostname }}"
+  ip: "{{ ci_server_internal_hostname }}"
+  logfile_infix: "{{ ci_server_internal_hostname }}"
+- hostname: NULL
+  ip: '*'
+  ssl_certificate_file: /etc/ssl/certs/ssl-cert-snakeoil.pem
+  ssl_certificate_key_file: /etc/ssl/private/ssl-cert-snakeoil.key
+
+
 ci_server_external_hostname: ci.zhdk.ch
+ci_server_base_url: https://{{ ci_server_external_hostname }}
+
 
