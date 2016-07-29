@@ -13,6 +13,8 @@ job_retention_duration: 10 Years
 task_retention_duration: 10 Years
 trial_retention_duration: 100 Days
 
+ci_create_db_backup_before_deploy: no
+
 address: 195.176.247.161
 #network 195.176.247.129
 #broadcast 195.176.247.129
