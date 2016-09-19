@@ -1,3 +1,5 @@
+defective_trial_same_executor_redispatch_delay: 3 Minutes
+
 ci_server_trial_dispatch_timeout: 3 Hours
 
 ci_server_authentication_providers:
