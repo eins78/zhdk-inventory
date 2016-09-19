@@ -60,6 +60,13 @@ managed_repositories:
       update_notification_token: {{cider_ci.integration_tests.update_notification_token}}
       foreign_api_repo: cider-ci_integration-tests
 
+  'https://github.com/cider-ci/cider-ci_repository':
+    update_attributes:
+      <<: *CIDER-CI
+      name: Cider-CI Repository
+      update_notification_token: {{cider_ci.repository.update_notification_token}}
+      foreign_api_repo: cider-ci_repository
+
 
   #############################################################################
   ### Leihs ###################################################################
