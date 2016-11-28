@@ -1,5 +1,2 @@
 ci_server_external_hostname: ci.zhdk.ch
 ci_server_base_url: https://{{ ci_server_external_hostname }}
-
-
-

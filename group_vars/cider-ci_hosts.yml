@@ -2,4 +2,3 @@ ci_ntp_setup: yes
 ci_ntp_server: ntp.zhdk.ch
 
 ci_vim_mode: true
-

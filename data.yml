@@ -90,10 +90,10 @@ managed_repositories:
     update_attributes: &MADEK
       foreign_api_endpoint: https://api.github.com
       foreign_api_authtoken: {{github_authtoken}}
-      foreign_api_owner: Madek
+      foreign_api_owner: NULL
+      foreign_api_repo: NULL
       name: Madek
       update_notification_token: {{madek.madek.update_notification_token}}
-      foreign_api_repo: madek
       branch_trigger_include_match: '^.+$'
       public_view_permission: true
 
@@ -117,6 +117,12 @@ managed_repositories:
       name: Madek Admin-Webapp
       update_notification_token: {{madek.admin_webapp.update_notification_token}}
       foreign_api_repo: madek_admin-webapp
+
+  'https://github.com/Madek/madek-documentation':
+    update_attributes:
+      <<: *MADEK
+      name: Madek Documentation
+      update_notification_token: {{madek.documentation.update_notification_token}}
 
   'https://github.com/Madek/madek-datalayer':
     update_attributes:
