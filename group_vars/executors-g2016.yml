@@ -1,2 +1,4 @@
 ci_executor_custom_traits:
   - g2016
+
+ci_executor_ramdisk_size: 20G

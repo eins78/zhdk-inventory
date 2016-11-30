@@ -2,7 +2,7 @@ ci_executor_ramdisk_setup: yes
 ci_executor_working_dir: /ramdisk/ci-working-dir
 ci_executor_trait_postgresql_data_dir: /ramdisk/cider-ci_executor_trait_postgresql-{{ci_executor_trait_postgresql_version}}_data
 
-ci_executor_trial_retention_duration: 1 Minute
+ci_executor_trial_retention_duration: 15 seconds
 ci_executor_daily_reboot: yes
 
 ci_executor_trait_ansible: true
