@@ -19,53 +19,56 @@ managed_repositories:
     update_attributes: &CIDER-CI
       name: Cider-CI
       update_notification_token: {{cider_ci.cider_ci.update_notification_token}}
-      foreign_api_endpoint: https://api.github.com
-      foreign_api_authtoken: {{github_authtoken}}
-      foreign_api_owner: cider-ci
-      foreign_api_repo: cider-ci
+      remote_api_token: {{github_authtoken}}
+      # the following 4 properties will be inferred automatically since version 4.2 if they are set to NULL
+      remote_api_token_bearer: NULL
+      remote_api_endpoint: NULL
+      remote_api_namespace: NULL
+      remote_api_name: NULL
       public_view_permission: true
+      send_status_notifications: true
+      # the bearer of the token would need manage auth for the repo
+      manage_remote_push_hooks: false
+      # we have set up push hooks manually at any rate
+      remote_fetch_interval: 7 days
+      branch_trigger_include_match: '^.+$'
+      branch_trigger_max_commit_age: 24 hours
 
   'https://github.com/cider-ci/cider-ci_builder':
     update_attributes:
       <<: *CIDER-CI
       name: Cider-CI Builder
       update_notification_token: {{cider_ci.builder.update_notification_token}}
-      foreign_api_repo: cider-ci_builder
 
   'https://github.com/cider-ci/cider-ci_clj-utils':
     update_attributes:
       <<: *CIDER-CI
       name: Cider-CI clj-utils
       update_notification_token: {{cider_ci.clj_utils.update_notification_token}}
-      foreign_api_repo: cider-ci_clj-utils
 
   'https://github.com/cider-ci/cider-ci_deploy':
     update_attributes:
       <<: *CIDER-CI
       name: Cider-CI Deploy
       update_notification_token: {{cider_ci.deploy.update_notification_token}}
-      foreign_api_repo: cider-ci_deploy
 
   'https://github.com/cider-ci/cider-ci_documentation-source':
     update_attributes:
       <<: *CIDER-CI
       name: Cider-CI Documentation Source
       update_notification_token: {{cider_ci.documentation_source.update_notification_token}}
-      foreign_api_repo: cider-ci_documentation-source
 
   'https://github.com/cider-ci/cider-ci_integration-tests':
     update_attributes:
       <<: *CIDER-CI
       name: Cider-CI Integration-Tests
       update_notification_token: {{cider_ci.integration_tests.update_notification_token}}
-      foreign_api_repo: cider-ci_integration-tests
 
   'https://github.com/cider-ci/cider-ci_repository':
     update_attributes:
       <<: *CIDER-CI
       name: Cider-CI Repository
       update_notification_token: {{cider_ci.repository.update_notification_token}}
-      foreign_api_repo: cider-ci_repository
 
 
   #############################################################################
@@ -88,13 +91,21 @@ managed_repositories:
 
   'https://github.com/Madek/madek':
     update_attributes: &MADEK
-      foreign_api_endpoint: https://api.github.com
-      foreign_api_authtoken: {{github_authtoken}}
-      foreign_api_owner: NULL
-      foreign_api_repo: NULL
       name: Madek
       update_notification_token: {{madek.madek.update_notification_token}}
+      remote_api_token: {{github_authtoken}}
+      # the following 4 properties will be inferred automatically since version 4.2 if they are set to NULL
+      remote_api_token_bearer: NULL
+      remote_api_endpoint: NULL
+      remote_api_namespace: NULL
+      remote_api_name: NULL
+      public_view_permission: true
+      send_status_notifications: true
+      manage_remote_push_hooks: true
+      # remote_fetch_interval can be as high as you like if manage_remote_push_hooks work reliably
+      remote_fetch_interval: 7 days
       branch_trigger_include_match: '^.+$'
+      branch_trigger_max_commit_age: 24 hours
       public_view_permission: true
 
   'https://github.com/Madek/madek-api':
@@ -102,21 +113,18 @@ managed_repositories:
       <<: *MADEK
       name: Madek API
       update_notification_token: {{madek.api.update_notification_token}}
-      foreign_api_repo: madek-api
 
   'https://github.com/Madek/madek-deploy':
     update_attributes:
       <<: *MADEK
       name: Madek Deploy
       update_notification_token: {{madek.deploy.update_notification_token}}
-      foreign_api_repo: madek-api
 
   'https://github.com/Madek/madek_admin-webapp':
     update_attributes:
       <<: *MADEK
       name: Madek Admin-Webapp
       update_notification_token: {{madek.admin_webapp.update_notification_token}}
-      foreign_api_repo: madek_admin-webapp
 
   'https://github.com/Madek/madek-documentation':
     update_attributes:
@@ -129,18 +137,15 @@ managed_repositories:
       <<: *MADEK
       name: Madek Datalayer
       update_notification_token: {{madek.datalayer.update_notification_token}}
-      foreign_api_repo: madek-datalayer
 
   'https://github.com/Madek/madek_integration-tests':
     update_attributes:
       <<: *MADEK
       name: Madek Integration-Tests
       update_notification_token: {{madek.integration_tests.update_notification_token}}
-      foreign_api_repo: madek_integration-tests
 
   'https://github.com/Madek/madek-webapp':
     update_attributes:
       <<: *MADEK
       name: Madek Webapp
       update_notification_token: {{madek.webapp.update_notification_token}}
-      foreign_api_repo: madek-webapp
