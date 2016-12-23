@@ -11,6 +11,10 @@ ci-executor-05
 [executors-g2016]
 ci-g2016-01
 ci-g2016-02
+ci-g2016-03
+ci-g2016-04
+ci-g2016-05
+ci-g2016-06
 
 [zhdk-vm-executors]
 ci-executor.madek
