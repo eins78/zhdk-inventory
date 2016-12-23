@@ -28,7 +28,7 @@ managed_repositories:
       public_view_permission: true
       send_status_notifications: true
       # the bearer of the token would need manage auth for the repo
-      manage_remote_push_hooks: false
+      manage_remote_push_hooks: yes
       # we have set up push hooks manually at any rate
       remote_fetch_interval: 7 days
       branch_trigger_include_match: '^.+$'
@@ -38,6 +38,12 @@ managed_repositories:
     update_attributes:
       <<: *CIDER-CI
       name: Cider-CI Builder
+      update_notification_token: {{cider_ci.builder.update_notification_token}}
+
+  'https://github.com/cider-ci/cider-ci_dispatcher':
+    update_attributes:
+      <<: *CIDER-CI
+      name: Cider-CI Dispatcher
       update_notification_token: {{cider_ci.builder.update_notification_token}}
 
   'https://github.com/cider-ci/cider-ci_clj-utils':
