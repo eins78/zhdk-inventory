@@ -1,4 +1,4 @@
 ci_executor_max_load: 8
 
-ansible_host: ci-g2016-06.byod.zhdk.ch
+ansible_host: ci-g2016-08.byod.zhdk.ch
 ansible_user: root

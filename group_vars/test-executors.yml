@@ -11,6 +11,7 @@ ci_executor_trait_bower: true
 ci_executor_trait_chruby: true
 ci_executor_trait_firefox_esr: true
 ci_executor_trait_git_crypt: true
+ci_executor_trait_gpg: yes
 ci_executor_trait_leiningen: true
 ci_executor_trait_misc: true
 ci_executor_trait_mysql: true
@@ -22,3 +23,6 @@ ci_executor_trait_postgresql: true
 ci_executor_trait_rbenv: false
 ci_executor_trait_ruby_install: true
 ci_executor_trait_sqlite: true
+
+gpg_import_keys:
+  - "{{ inventory_dir + '/ci-executor.gpg.secret.asc' }}"
