@@ -76,24 +76,17 @@ managed_repositories:
       name: Cider-CI Integration-Tests
       update_notification_token: {{cider_ci.integration_tests.update_notification_token}}
 
-  'https://github.com/cider-ci/cider-ci_repository':
+  'https://github.com/cider-ci/cider-ci_server':
     update_attributes:
       <<: *CIDER-CI
-      name: Cider-CI Repository
-      update_notification_token: {{cider_ci.repository.update_notification_token}}
+      name: Cider-CI Server
+      update_notification_token: {{cider_ci.server.update_notification_token}}
 
   'https://github.com/cider-ci/cider-ci_user-interface':
     update_attributes:
       <<: *CIDER-CI
       name: Cider-CI User-Interface
       update_notification_token: {{cider_ci.user_interface.update_notification_token}}
-
-  'https://github.com/cider-ci/cider-ci_ui2':
-    update_attributes:
-      <<: *CIDER-CI
-      name: Cider-CI UI2
-      update_notification_token: {{cider_ci.ui2.update_notification_token}}
-
 
 
 
@@ -102,14 +95,20 @@ managed_repositories:
   #############################################################################
 
   'https://github.com/leihs/leihs':
-    update_attributes:
+    update_attributes: &LEIHS
       name: leihs
       update_notification_token: {{leihs.leihs.update_notification_token}}
-      foreign_api_endpoint: https://api.github.com
       foreign_api_authtoken: {{github_authtoken}}
-      foreign_api_owner: leihs
-      foreign_api_repo: leihs
+      remote_api_token_bearer: NULL
+      remote_api_endpoint: NULL
+      remote_api_namespace: NULL
+      remote_api_name: NULL
 
+  'https://github.com/leihs/leihs_legacy':
+    update_attributes:
+      <<: *LEIHS
+      name: leihs legacy
+      update_notification_token: {{leihs.leihs_legacy.update_notification_token}}
 
   #############################################################################
   ### Madek ###################################################################
