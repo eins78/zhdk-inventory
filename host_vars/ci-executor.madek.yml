@@ -6,7 +6,7 @@ ci_executor_daily_reboot: yes
 ansible_host: ci-executor.madek.zhdk.ch
 ansible_user: root
 
-accepted_repositories:
+executor_accepted_repositories:
 - https://github.com/Madek/madek
 - https://github.com/cider-ci/cider-ci
 - https://github.com/SusanneSchumacher/demo.madek.zhdk.ch.git
@@ -17,6 +17,7 @@ ci_executor_trait_git_crypt: true
 ci_executor_trait_gpg: true
 ci_executor_trait_leiningen: true
 ci_executor_trait_nodejs: true
+ci_executor_trait_ubuntu_desktop: false
 
 # this is a vm
 ci_ntp_setup: false
